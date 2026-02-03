@@ -1,0 +1,19 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+input, button {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+

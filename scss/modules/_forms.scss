@@ -1,0 +1,11 @@
+.image-items, .form-items form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 300px;    
+}
+
+.image-generator {
+    margin-bottom: 3rem;
+}
