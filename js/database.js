@@ -20,17 +20,18 @@ $(document).ready(function () {
 });
 
 function saveImage(email, imageUrl) {
+    
     // Gets images from localStorage
     const images = JSON.parse(localStorage.getItem('images')) || [];
 
     // Adds new image
     images.push({
-        email: email,   // User's email
-        imageUrl: imageUrl, // Url of saved image
+        email: email,   
+        imageUrl: imageUrl, 
         savedAt: new Date().toISOString() // Saves time when image was saved
     });
 
-    //
+    
     localStorage.setItem('images', JSON.stringify(images));
 
     console.log("Image saved for:", email);

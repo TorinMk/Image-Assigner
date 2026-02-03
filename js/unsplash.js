@@ -30,13 +30,14 @@ function generateImage(query, email) {
         method: 'GET',
         data: {
             query: query,   // Search keyword
-            client_id: accessKey    // API key
+            client_id: accessKey
         },
+
         // If API call is successfull
         success: function(data)  {
             const imageUrl = data.urls.regular; // Extracts image URL
             const photographer  = data.user.name;   // Gets photographer name
-            const profileLink = data.user.links.html;   // Gets  photographers link
+            const profileLink = data.user.links.html;   // Gets photographers link
 
             // Saves user's email and the imageUrl
             saveImage(email, imageUrl);
@@ -50,6 +51,7 @@ function generateImage(query, email) {
                 </p>
                 `);
         },
+        
         // Runs if API call fails
         error: function () {
             alert('Something failed!')
