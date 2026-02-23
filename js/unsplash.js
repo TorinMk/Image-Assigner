@@ -1,4 +1,5 @@
 let currentImageUrl = null;
+letCurrentImageId = null;
 
 // Wait till page is fully  loaded
 $(document).ready(function () {
@@ -10,12 +11,12 @@ $(document).ready(function () {
 
         // If no email stops program
         if (!email) {
-            alert("Please submit an email!")
+            showMessage("Please enter a email", "error")
             return;
         }
         // If search query is empty stop program
         if (query === "") {
-            alert("Please enter a search!")
+            showMessage("Please enter a search query!", "error")
             return;
         }
 
@@ -40,9 +41,12 @@ function generateImage(query, email) {
             const imageUrl = data.urls.regular; // Extracts image URL
             const photographer  = data.user.name;   // Gets photographer name
             const profileLink = data.user.links.html;   // Gets photographers link
+            const imageId = data.id; // Gets ID
 
             // Saves user's email and the imageUrl
             currentImageUrl = imageUrl;
+            
+            currentImageId = imageId;
 
             $('#image-container').html(`
                 <br>
@@ -56,7 +60,7 @@ function generateImage(query, email) {
         
         // Runs if API call fails
         error: function () {
-            alert('Something failed!')
+            showMessage("Something Failed", "error")
         }
     })
 }

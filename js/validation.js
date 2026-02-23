@@ -3,7 +3,7 @@ function validateForm() {
 
     // Empty check
     if (email == "") {
-        alert("Please fill out the form");
+        showMessage("Please fill out the email", "error");
         return false;
     }
 
@@ -13,7 +13,7 @@ function validateForm() {
 
     // Tests email against regex pattern
     if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address!");
+        showMessage("Please enter a valid email!", "error")
         return false;
     }
 

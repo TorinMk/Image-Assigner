@@ -8,12 +8,19 @@
 </head>
 <body>
 
+    <!-- Alert Box -->
+    <div id="message-box"></div>
+
     <!-- Header section -->
     <header>
         <div class="header-items">
-            <h1>JS Array Image Generator</h1>
+            <h1>Image Generator</h1>
         </div>
     </header>
+
+    <div class="saveButton">
+        <button id="save-image">Save Image</button>
+    </div>
 
     <!-- Image generator section -->
     <div class="image-generator">
@@ -30,15 +37,10 @@
     <div class="forms">
         <div class="form-items">
             <form name="emailForm" id="emailForm">
-                
                 <input type="email" name="email" placeholder="Email Address" required>
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </div>
-
-    <div class="saveButton">
-        <button id="save-image">Save Image</button>
     </div>
 
     <div id="saved-images">
@@ -59,5 +61,6 @@
     <script src="js/validation.js"></script>
     <script src="js/database.js"></script>
     <script src="js/unsplash.js"></script>
+    <script src="js/message.js"></script>
 </body>
 </html>
