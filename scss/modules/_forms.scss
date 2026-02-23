@@ -20,11 +20,13 @@
     button {
         background-color: #1E90FF;
         color: white;
+        @include darken(#1E90FF)
     }
 }
 
 .saveButton button {
     background-color: #50C878;
+    @include darken(#50C878)
 }
 
 .forms {
@@ -39,5 +41,6 @@
     button {
         background-color: #6C3BAA;
         color: white;
+        @include darken(#6C3BAA)
     }
 }
