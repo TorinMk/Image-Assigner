@@ -18,29 +18,31 @@
         </div>
     </header>
 
+        <!-- Email form section -->
+    <div class="forms">
+        <div class="form-items">
+            <form name="emailForm" id="emailForm">
+                <input type="email" name="email" placeholder="Email Address">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+        <!-- Image generator section -->
+    <div class="image-generator">
+        <div class="image-items">
+        <form>
+            <input type="text" id="search" placeholder="Search for an image">
+            <button type="submit" id="imageGenerator">Generate an image!</button>
+        </form>
+    </div>
+
     <div class="saveButton">
         <button id="save-image">Save Image</button>
     </div>
 
-    <!-- Image generator section -->
-    <div class="image-generator">
-        <div class="image-items">
-            <input type="text" id="search" placeholder="Search for an image">
-            <button id="imageGenerator">Generate an image!</button>
-        </div>
-
         <!-- Where generated image will show -->
         <div id="image-container"></div>
-    </div>
-
-    <!-- Email form section -->
-    <div class="forms">
-        <div class="form-items">
-            <form name="emailForm" id="emailForm">
-                <input type="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
     </div>
 
     <div id="saved-images">
@@ -58,9 +60,10 @@
 
     <!-- Javascript Files -->
     <script src="jquery-4.0.0.min.js"></script>
+    <script src="js/message.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/database.js"></script>
     <script src="js/unsplash.js"></script>
-    <script src="js/message.js"></script>
 </body>
 </html>

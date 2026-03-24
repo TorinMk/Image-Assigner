@@ -1,15 +1,23 @@
-.image-items, .form-items, .saveButton {
+.image-items, .form-items{
+    margin-bottom: 1rem;
+
     form {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
         margin: 0 auto;
-        max-width: 500px;  
+        max-width: 600px;  
         width: 100%;  
     }
+    .image-items input {
+        flex: 1;
+    }
+    
     input, button {
+        width: 100%;
         border-radius: 12px;
         font-size: 1.5rem;
+        white-space: nowrap;
     }
 }
 
@@ -24,9 +32,11 @@
     }
 }
 
+
 .saveButton button {
     background-color: #50C878;
-    @include darken(#50C878)
+    @include darken(#50C878);
+    border-radius: 12px;
 }
 
 .forms {

@@ -1,5 +1,8 @@
 // Waits till page is fully loaded
 $(document).ready(function () {
+
+    localStorage.removeItem('userEmail');
+
     $('form[name="emailForm"]').on('submit', function (e) {
         e.preventDefault();
 
@@ -22,7 +25,8 @@ $(document).ready(function () {
 });
 
 $('#save-image').on('click', function () {
-    const email = localStorage.getItem('userEmail');
+    const email = getUserEmail();
+    if (!email) return;
 
     if (!email) {
         showMessage("Please submit an email first!", "error")
@@ -43,6 +47,11 @@ $('#save-image').on('click', function () {
 })
 
 function saveImage(email, imageUrl, imageId) {
+
+    if (!email) {
+        showMessage("No email found. Please enter an email!", "error");
+        return false;
+    }
     
     // Gets images from localStorage
     const images = JSON.parse(localStorage.getItem('images')) || [];

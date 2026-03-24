@@ -1,26 +1,23 @@
 let currentImageUrl = null;
-letCurrentImageId = null;
+let currentImageId = null;
 
 // Wait till page is fully  loaded
 $(document).ready(function () {
 
-    // Click event listener
-    $('#imageGenerator').on('click', function () {
-        const email = localStorage.getItem('userEmail');
+    $('.image-items form').on('submit', function (e) {
+        e.preventDefault();
+
+        const email = getUserEmail();
+        if (!email) return;
+
         const query = $('#search').val().trim();
 
-        // If no email stops program
-        if (!email) {
-            showMessage("Please enter a email", "error")
-            return;
-        }
-        // If search query is empty stop program
         if (query === "") {
-            showMessage("Please enter a search query!", "error")
+            showMessage("Please enter a search query!", "error");
             return;
         }
 
-        generateImage(query, email)
+        generateImage(query, email);
     });
 });
 

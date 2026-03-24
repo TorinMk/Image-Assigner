@@ -1,19 +1,15 @@
 function validateForm() {
     let email = document.forms["emailForm"]["email"].value.trim();
 
-    // Empty check
-    if (email == "") {
-        showMessage("Please fill out the email", "error");
+    if (email === "") {
+        showMessage("Please enter your email address", "error");
         return false;
     }
 
-    // Email format check
-    // Regular expression
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Tests email against regex pattern
     if (!emailPattern.test(email)) {
-        showMessage("Please enter a valid email!", "error")
+        showMessage("Please enter a valid email address (e.g. name@example.com)", "error");
         return false;
     }
 
