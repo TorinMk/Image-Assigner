@@ -8,55 +8,49 @@
 </head>
 <body>
 
-    <!-- Alert Box -->
-    <div id="message-box"></div>
+    <div class="page-content">
+        <!-- Alert Box -->
+        <div id="message-box"></div>
 
-    <!-- Header section -->
-    <header>
-        <div class="header-items">
-            <h1>Image Generator</h1>
+        <!-- Header section -->
+        <header>
+            <div class="header-items">
+                <h1>Image Generator</h1>
+            </div>
+        </header>
+
+            <!-- Email form section -->
+        <div class="forms">
+            <div class="form-items">
+                <form name="emailForm" id="emailForm">
+                    <input type="email" name="email" placeholder="Email Address">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
-    </header>
 
-        <!-- Email form section -->
-    <div class="forms">
-        <div class="form-items">
-            <form name="emailForm" id="emailForm">
-                <input type="email" name="email" placeholder="Email Address">
-                <button type="submit">Submit</button>
+            <!-- Image generator section -->
+        <div class="image-generator">
+            <div class="image-items">
+            <form>
+                <input type="text" id="search" placeholder="Search for an image">
+                <button type="submit" id="imageGenerator">Generate an image!</button>
             </form>
         </div>
-    </div>
 
-        <!-- Image generator section -->
-    <div class="image-generator">
-        <div class="image-items">
-        <form>
-            <input type="text" id="search" placeholder="Search for an image">
-            <button type="submit" id="imageGenerator">Generate an image!</button>
-        </form>
-    </div>
-
-    <div class="saveButton">
-        <button id="save-image">Save Image</button>
-    </div>
-
-        <!-- Where generated image will show -->
-        <div id="image-container"></div>
-    </div>
-
-    <div id="saved-images">
-        <h2>Images saved for email</h2>
-        <div id="image-list"></div>
-    </div>
-
-    <!-- Footer section -->
-    <footer>
-        <div class="footer">
-            <h2>Image Generator made using <a href="https://unsplash.com/developers" target="_blank">Unsplash API</a></h2>
-            <img src="assets/cover.webp" alt="Image for Unsplash API">
+        <div class="saveButton">
+            <button id="save-image">Save Image</button>
         </div>
-    </footer>
+
+            <!-- Where generated image will show -->
+            <div id="image-container"></div>
+        </div>
+
+        <div id="saved-images">
+            <h2>Images saved for email</h2>
+            <div id="image-list"></div>
+        </div>
+    </div>
 
     <!-- Javascript Files -->
     <script src="jquery-4.0.0.min.js"></script>
