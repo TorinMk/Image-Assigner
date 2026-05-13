@@ -1,5 +1,5 @@
 function validateForm() {
-    let email = document.forms["emailForm"]["email"].value.trim();
+    let email = document.forms["emailForm"]["email"].value.trim().toLowerCase();
 
     if (email === "") {
         showMessage("Please enter your email address", "error");

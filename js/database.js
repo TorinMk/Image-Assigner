@@ -12,7 +12,7 @@ $(document).ready(function () {
         }
 
         // Grabs email and removes any extra spaces
-        let email = document.forms["emailForm"]["email"].value.trim();
+        let email = document.forms["emailForm"]["email"].value.trim().toLowerCase();
 
         // Saves email in the browser
         localStorage.setItem('userEmail', email)
@@ -47,6 +47,8 @@ $('#save-image').on('click', function () {
 })
 
 function saveImage(email, imageUrl, imageId) {
+
+    email = email.toLowerCase();
 
     if (!email) {
         showMessage("No email found. Please enter an email!", "error");
@@ -85,7 +87,7 @@ function displaySavedImages(email) {
     
     const images = JSON.parse(localStorage.getItem('images')) || [];
 
-    const filtered = images.filter(img => img.email === email);
+    const filtered = images.filter(img => img.email.toLowerCase() === email.toLowerCase());
 
     if (filtered.length === 0) {
         container.html(`<p>You have no saved images at the moment!</p>`);
